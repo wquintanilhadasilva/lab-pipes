@@ -7,12 +7,16 @@ import { AppComponent } from './app.component';
 import { ExemplosPipesComponent } from './exemplos-pipes/exemplos-pipes.component';
 import { CamelCasePipe } from './pipes/camel-case.pipe';
 import { SettingsService } from './settings.service';
+import { FiltroPipe } from './pipes/filtro.pipe';
+import { FiltroImpuroPipe } from './pipes/filtro-impuro.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     ExemplosPipesComponent,
-    CamelCasePipe
+    CamelCasePipe,
+    FiltroPipe,
+    FiltroImpuroPipe
   ],
   imports: [
     BrowserModule,
@@ -40,7 +44,7 @@ import { SettingsService } from './settings.service';
     {
       provide:LOCALE_ID,
       deps:[SettingsService],
-      useFactory: (service:SettingsService) => service.getLocale()
+      useFactory: (service) => service.getLocale()
     }
   ],
   bootstrap: [AppComponent]

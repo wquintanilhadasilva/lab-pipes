@@ -8,3 +8,27 @@
 <p>URL: {{livro.url}}</p>
 <br>
 <p>Livro: {{livro | json }}</p>
+
+<br>
+Filtro:
+<br>
+<input type="text" [(ngModel)]="filtro">
+<br>
+Novo valor:
+<br>
+<input type="text" #textoAdd>
+<br>
+<button (click)="livros.push(textoAdd.value)">Add</button>
+<br>
+<p>Pipe puro</p>
+<ul>
+  <li *ngFor="let l of livros | filtro:filtro">{{l}}</li>
+</ul>
+<p>Pipe IMPURO</p>
+<ul>
+  <li *ngFor="let l of livros | filtroImpuro:filtro">{{l}}</li>
+</ul>
+<p>Maneira correta de fazer filtros - NÃO USAR PIPES PARA ESSA FUNCIONALIDADE</p>
+<ul>
+  <li *ngFor="let l of obterCursos()">{{l}}</li>
+</ul>
