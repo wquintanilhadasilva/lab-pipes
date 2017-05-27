@@ -5,11 +5,13 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { ExemplosPipesComponent } from './exemplos-pipes/exemplos-pipes.component';
+import { CamelCasePipe } from './pipes/camel-case.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ExemplosPipesComponent
+    ExemplosPipesComponent,
+    CamelCasePipe
   ],
   imports: [
     BrowserModule,
