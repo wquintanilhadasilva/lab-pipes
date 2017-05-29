@@ -44,7 +44,7 @@ import { FiltroImpuroPipe } from './pipes/filtro-impuro.pipe';
     {
       provide:LOCALE_ID,
       deps:[SettingsService],
-      useFactory: (service) => service.getLocale()
+      useFactory: service => service.getLocale()
     }
   ],
   bootstrap: [AppComponent]

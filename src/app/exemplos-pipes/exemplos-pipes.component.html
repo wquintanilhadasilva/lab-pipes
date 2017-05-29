@@ -1,3 +1,9 @@
+
+<p>{{ valorAssincrono2 | async }}</p>
+<p>{{ valorAssincrono | async }}</p>
+
+<br>
+
 <p>Título: {{livro.titulo | uppercase | lowercase | camelCase}}</p>
 <p>Estrelas: {{livro.rating | number:'2.3'}}</p>
 <p>Páginas: {{livro.numeroPaginas | number}}</p>
@@ -32,3 +38,5 @@ Novo valor:
 <ul>
   <li *ngFor="let l of obterCursos()">{{l}}</li>
 </ul>
+
+<br>
